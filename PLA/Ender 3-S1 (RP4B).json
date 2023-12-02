@@ -1,0 +1,204 @@
+{
+    "auxiliary_fan": "0",
+    "bed_custom_model": "",
+    "bed_custom_texture": "",
+    "bed_exclude_area": [
+        "0x0"
+    ],
+    "before_layer_change_gcode": "TIMELAPSE_TAKE_FRAME",
+    "change_filament_gcode": "",
+    "cooling_tube_length": "5",
+    "cooling_tube_retraction": "91.5",
+    "default_filament_profile": [
+        "Creality Generic PLA"
+    ],
+    "default_print_profile": "0.20mm Standard @Creality Ender3V2",
+    "deretraction_speed": [
+        "40"
+    ],
+    "enable_filament_ramming": "1",
+    "extra_loading_move": "-2",
+    "extruder_clearance_height_to_lid": "34",
+    "extruder_clearance_height_to_rod": "34",
+    "extruder_clearance_radius": "47",
+    "extruder_colour": [
+        "#FCE94F"
+    ],
+    "extruder_offset": [
+        "0x0"
+    ],
+    "fan_kickstart": "0",
+    "fan_speedup_overhangs": "1",
+    "fan_speedup_time": "0",
+    "from": "",
+    "gcode_flavor": "klipper",
+    "high_current_on_filament_swap": "0",
+    "host_type": "octoprint",
+    "inherits": "Creality Ender-3 V2 0.4 nozzle",
+    "layer_change_gcode": "",
+    "machine_end_gcode": "{if max_layer_z < printable_height}G1 Z{min(max_layer_z+2, printable_height)} F600 ; Move print head up{endif}\nG1 X5 Y{print_bed_max[1]*0.8} F{travel_speed*30} ; present print\n{if max_layer_z < printable_height-10}G1 Z{min(max_layer_z+70, printable_height-10)} F600 ; Move print head further up{endif}\n{if max_layer_z < printable_height*0.6}G1 Z{printable_height*0.6} F600 ; Move print head further up{endif}\nM140 S0 ; turn off heatbed\nM104 S0 ; turn off temperature\nM107 ; turn off fan\nM84 X Y E ; disable motors",
+    "machine_load_filament_time": "0",
+    "machine_max_acceleration_e": [
+        "5000",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "10000",
+        "500"
+    ],
+    "machine_max_acceleration_retracting": [
+        "1000",
+        "1000"
+    ],
+    "machine_max_acceleration_travel": [
+        "500",
+        "500"
+    ],
+    "machine_max_acceleration_x": [
+        "5000",
+        "500"
+    ],
+    "machine_max_acceleration_y": [
+        "5000",
+        "500"
+    ],
+    "machine_max_acceleration_z": [
+        "100",
+        "100"
+    ],
+    "machine_max_jerk_e": [
+        "5",
+        "5"
+    ],
+    "machine_max_jerk_x": [
+        "8",
+        "8"
+    ],
+    "machine_max_jerk_y": [
+        "8",
+        "8"
+    ],
+    "machine_max_jerk_z": [
+        "0.4",
+        "0.4"
+    ],
+    "machine_max_speed_e": [
+        "60",
+        "60"
+    ],
+    "machine_max_speed_x": [
+        "500",
+        "500"
+    ],
+    "machine_max_speed_y": [
+        "500",
+        "500"
+    ],
+    "machine_max_speed_z": [
+        "10",
+        "10"
+    ],
+    "machine_min_extruding_rate": [
+        "0",
+        "0"
+    ],
+    "machine_min_travel_rate": [
+        "0",
+        "0"
+    ],
+    "machine_pause_gcode": "M25 ;pause print",
+    "machine_start_gcode": "START_PRINT EXTRUDER_TEMP={first_layer_temperature[initial_extruder]} BED_TEMP={first_layer_bed_temperature[initial_extruder]}",
+    "machine_unload_filament_time": "0",
+    "max_layer_height": [
+        "0.32"
+    ],
+    "min_layer_height": [
+        "0.08"
+    ],
+    "name": "Ender 3-S1 (RP4B)",
+    "nozzle_diameter": [
+        "0.4"
+    ],
+    "nozzle_hrc": "0",
+    "nozzle_type": "undefine",
+    "nozzle_volume": "0",
+    "parking_pos_retraction": "92",
+    "print_host": "100.99.171.102",
+    "print_host_webui": "",
+    "printable_area": [
+        "0x0",
+        "235x0",
+        "235x235",
+        "0x235"
+    ],
+    "printable_height": "270",
+    "printer_model": "Creality Ender-3 V2",
+    "printer_notes": "",
+    "printer_settings_id": "Ender 3-S1 (RP4B)",
+    "printer_technology": "FFF",
+    "printer_variant": "0.4",
+    "printhost_apikey": "",
+    "printhost_authorization_type": "key",
+    "printhost_cafile": "",
+    "printhost_password": "",
+    "printhost_port": "",
+    "printhost_ssl_ignore_revoke": "0",
+    "printhost_user": "",
+    "purge_in_prime_tower": "1",
+    "retract_before_wipe": [
+        "70%"
+    ],
+    "retract_length_toolchange": [
+        "2"
+    ],
+    "retract_lift_above": [
+        "0"
+    ],
+    "retract_lift_below": [
+        "0"
+    ],
+    "retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "retract_restart_extra": [
+        "0"
+    ],
+    "retract_restart_extra_toolchange": [
+        "0"
+    ],
+    "retract_when_changing_layer": [
+        "1"
+    ],
+    "retraction_length": [
+        "0.65"
+    ],
+    "retraction_minimum_travel": [
+        "2"
+    ],
+    "retraction_speed": [
+        "60"
+    ],
+    "scan_first_layer": "0",
+    "silent_mode": "0",
+    "single_extruder_multi_material": "1",
+    "template_custom_gcode": "",
+    "thumbnails": [
+        "300x300"
+    ],
+    "upward_compatible_machine": [],
+    "use_firmware_retraction": "1",
+    "use_relative_e_distances": "1",
+    "version": "1.4.1.0",
+    "wipe": [
+        "0"
+    ],
+    "wipe_distance": [
+        "1"
+    ],
+    "z_hop": [
+        "0.24"
+    ],
+    "z_hop_types": [
+        "Normal Lift"
+    ]
+}
